@@ -2,7 +2,7 @@ package ru.netology.stats;
 
 public class StatService {
 
-    public long TotalSales(long[] sales) {
+    public long totalSales(long[] sales) {
         long total = 0;
 
         for (long monthSale : sales) {
@@ -11,7 +11,7 @@ public class StatService {
         return total;
     }
 
-    public long AverageSales(long[] sales) {
+    public long averageSales(long[] sales) {
         long sum = 0;
         for (long sale : sales) {
             sum += sale;
@@ -19,7 +19,7 @@ public class StatService {
         return sum / sales.length;
     }
 
-    public int MinSales(int[] sales) {
+    public int minSales(long[] sales) {
         int minMonth = 0; // номер месяца с минимальными продажами среди просмотренных ранее
 
         for (int i = 0; i < sales.length; i++) {
@@ -31,7 +31,7 @@ public class StatService {
         return minMonth + 1;
     }
 
-    public int MaxSales(int[] sales) {
+    public int maxSales(long[] sales) {
         int maxMonth = 0; //
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] >= sales[maxMonth]) {
@@ -42,26 +42,26 @@ public class StatService {
         return maxMonth + 1;
     }
 
-    public int AllMinMonth(int[] sales, int average) {
-        int AllMinMonth = 0;
-        for (int sale : sales) {
+    public int allMinMonth(long[] sales, long average) {
+        int allMinMonth = 0;
+        for (long sale : sales) {
             if (sale < average) {
-                AllMinMonth++;
+                allMinMonth++;
 
             }
         }
-        return AllMinMonth;
+        return allMinMonth;
     }
 
-    public int AllMaxMonth(int[] sales, int average) {
-        int AllMaxMonth = 0;
-        for (int sale : sales) {
+    public int allMaxMonth(long[] sales, long average) {
+        int allMaxMonth = 0;
+        for (long sale : sales) {
             if (sale > average) {
-                AllMaxMonth++;
+                allMaxMonth++;
 
             }
         }
-        return AllMaxMonth;
+        return allMaxMonth;
     }
 }
 

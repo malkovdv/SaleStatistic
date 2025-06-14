@@ -70,7 +70,7 @@ public class StatServiceTest {
         int average = 15;
 
         int expectedMonth = 5;
-        int actualMonth = service.allMinMonth(sales, average);
+        long actualMonth = service.allMinMonth(sales);
 
         assertEquals(expectedMonth, actualMonth);
     }
@@ -85,7 +85,7 @@ public class StatServiceTest {
         int average = 15;
 
         int expectedMonth = 5;
-        int actualMonth = service.allMaxMonth(sales, average);
+        int actualMonth = service.allMaxMonth(sales);
 
         assertEquals(expectedMonth, actualMonth);
     }

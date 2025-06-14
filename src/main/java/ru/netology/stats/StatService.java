@@ -42,10 +42,10 @@ public class StatService {
         return maxMonth + 1;
     }
 
-    public int allMinMonth(long[] sales, long average) {
+    public int allMinMonth(long[] sales) {
         int allMinMonth = 0;
         for (long sale : sales) {
-            if (sale < average) {
+            if (sale < averageSales(sales)) {
                 allMinMonth++;
 
             }
@@ -53,10 +53,10 @@ public class StatService {
         return allMinMonth;
     }
 
-    public int allMaxMonth(long[] sales, long average) {
+    public int allMaxMonth(long[] sales) {
         int allMaxMonth = 0;
         for (long sale : sales) {
-            if (sale > average) {
+            if (sale > averageSales(sales)) {
                 allMaxMonth++;
 
             }
